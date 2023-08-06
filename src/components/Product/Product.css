@@ -1,0 +1,41 @@
+.product-con {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, auto));
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+.product-con img {
+    width: 330px;
+}
+
+.product-body h4 {
+    text-transform: uppercase;
+    font-size: 25px;
+    color: #636363;
+}
+
+.product-body p {
+    width: 600px;
+}
+
+@media (max-width: 1000px) {
+    .product-body {
+        display: grid;
+        justify-items: center;
+    }
+
+    .product-body h2 {
+        font-size: 22px;
+        width: 400px;
+    }
+
+    .product-body p {
+        width: 400px;
+    }
+
+    .product-con img {
+        width: 200px;
+    }
+}

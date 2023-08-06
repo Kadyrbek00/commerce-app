@@ -1,0 +1,22 @@
+.main_nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    margin-right: 15px;
+}
+
+.buttons button {
+    color: black;
+    border: 1px solid black;
+    margin-left: 10px;
+}
+
+.buttons button:hover {
+    background-color: rgb(48, 45, 45);
+    color: rgb(189, 189, 189);
+}

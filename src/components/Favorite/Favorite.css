@@ -1,0 +1,38 @@
+.fav-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    justify-content: center;
+    text-align: center;
+    margin: 30px;
+    background-color: rgb(245, 245, 245);
+    box-shadow: 0px 0.1px 4px rgb(210, 208, 208);
+}
+
+.first-part h4 {
+    font-size: 21px;
+}
+
+.first-part img {
+    width: 150px;
+    background-color: rgb(245, 245, 245);
+}
+
+.second-part h5 {
+    font-size: 17px;
+}
+
+.fav-content button {
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    color: whitesmoke;
+    background-color: rgb(45, 44, 43);
+    margin: 15px;
+    transition: 0.3s all linear;
+}
+
+.fav-content button:hover {
+    background-color: rgb(198, 198, 198);
+    color: rgb(16, 16, 16);
+    ;
+}
