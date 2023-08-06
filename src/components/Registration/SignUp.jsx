@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { auth } from "../../utils/firebase"
@@ -20,7 +19,6 @@ const validationSchema = Yup.object({
 });
 
 export default function SignupPage() {
-    const [signIn, setSignIn] = useState(false)
 
     const register = async (values) => {
         try {

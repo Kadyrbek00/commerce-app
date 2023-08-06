@@ -40,7 +40,12 @@ function App() {
         <Navbar />
         <Routes>
           {!user ? (
-            <Route path='/' element={<InitialPage />} />
+            <>
+              <Route path='/' element={<InitialPage />} />
+              <Route path='/login' element={<SigninPage />} />
+              <Route path='/registration' element={<SignupPage />} />
+            </>
+
           ) : (
             <>
               <Route path='/' element={<HomePage />} />

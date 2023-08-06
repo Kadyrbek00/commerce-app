@@ -33,16 +33,16 @@
     object-fit: contain;
 }
 
-.product-body p {
+.product-bodys p {
     font-weight: bold;
 }
 
-.product-body .btn {
+.product-bodys .btn {
     background-color: rgb(48, 45, 45);
     color: rgb(189, 189, 189);
 }
 
-.product-body .btn:hover {
+.product-bodys .btn:hover {
     color: black;
     border: 1px solid black;
     background-color: #fff;
@@ -55,7 +55,6 @@
 
 .result p {
     font-size: 17px;
-    /* font-weight: 600; */
     margin: 30px;
 }
 

@@ -72,7 +72,7 @@ export default function Products() {
                 {productsToShow.map((product) => (
                     <div key={product.id} className="product">
                         <img src={product.image} alt={product.title.substring(0, 12)} />
-                        <div className="product-body">
+                        <div className="products-body">
                             <h5>{truncate(product.title, 12)}</h5>
                             <p>${product.price}</p>
                             <Link to={`/products/${product.id}`}>
