@@ -8,7 +8,7 @@
 .gradient {
     width: 100%;
     z-index: 1;
-    height: 88.9vh;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.4);
     background-image: linear-gradient(to top,
             rgba(0, 0, 0, 0.6) 0,

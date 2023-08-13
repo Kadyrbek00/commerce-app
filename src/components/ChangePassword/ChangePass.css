@@ -1,0 +1,24 @@
+.changeForm {
+    display: grid;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.form {
+    display: grid;
+    margin-bottom: 10px;
+}
+
+.form input {
+    outline: none;
+    padding: 5px;
+    width: 250px;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+.form label {}
+
+.form .errorMes {
+    color: red;
+}

@@ -9,9 +9,9 @@ import Products from './components/Products/Products';
 import Product from './components/Product/Product';
 import './App.css';
 import Favorite from './components/Favorite/Favorite';
-import SigninPage from './components/Registration/SignIn';
-import SignupPage from './components/Registration/SignUp';
 import InitialPage from './components/InitialPage/InitialPage';
+import ProfilePage from './components/ProfilePage/ProfilePage';
+import ChangePasswordForm from './components/ChangePassword/ChangePass';
 
 
 function App() {
@@ -37,27 +37,23 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar />
-        <Routes>
-          {!user ? (
-            <>
-              <Route path='/' element={<InitialPage />} />
-              <Route path='/login' element={<SigninPage />} />
-              <Route path='/registration' element={<SignupPage />} />
-            </>
-
-          ) : (
-            <>
+        {!user ? (
+          <Routes>
+            <Route path='/' element={<InitialPage />} />
+          </Routes>
+        ) : (
+          <>
+            <Navbar />
+            <Routes>
               <Route path='/' element={<HomePage />} />
               <Route path='/products' element={<Products />} />
               <Route path='/products/:id' element={<Product />} />
               <Route path='/favorites' element={<Favorite />} />
-              <Route path='/login' element={<SigninPage />} />
-              <Route path='/registration' element={<SignupPage />} />
-            </>
-          )}
-
-        </Routes>
+              <Route path='/profile' element={<ProfilePage />} />
+              <Route path='/changePassword' element={<ChangePasswordForm />} />
+            </Routes>
+          </>
+        )}
       </Router>
     </div>
   );

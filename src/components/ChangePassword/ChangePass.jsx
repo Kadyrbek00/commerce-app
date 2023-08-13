@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { changePasswordStart } from '../Slices/features/passwordSlice';
+import './ChangePass.css'
+import { Button } from '@mui/material';
 
 const ChangePasswordForm = () => {
     const dispatch = useDispatch();
@@ -26,8 +28,9 @@ const ChangePasswordForm = () => {
             .required('Подтвердите новый пароль'),
     });
 
-    const handleSubmit = (values) => {
+    const handleSubmit = (values, { resetForm }) => {
         dispatch(changePasswordStart(values));
+        resetForm()
     };
 
     return (
@@ -36,27 +39,27 @@ const ChangePasswordForm = () => {
             validationSchema={validationSchema}
             onSubmit={handleSubmit}
         >
-            <Form>
-                <div>
+            <Form className='changeForm'>
+                <div className='form'>
                     <label htmlFor="currentPassword">Текущий пароль:</label>
                     <Field type="password" id="currentPassword" name="currentPassword" />
-                    <ErrorMessage name="currentPassword" component="div" />
+                    <ErrorMessage className='errorMes' name="currentPassword" component="div" />
                 </div>
-                <div>
+                <div className='form'>
                     <label htmlFor="newPassword">Новый пароль:</label>
                     <Field type="password" id="newPassword" name="newPassword" />
-                    <ErrorMessage name="newPassword" component="div" />
+                    <ErrorMessage className='errorMes' name="newPassword" component="div" />
                 </div>
-                <div>
+                <div className='form'>
                     <label htmlFor="confirmPassword">Подтвердите новый пароль:</label>
                     <Field type="password" id="confirmPassword" name="confirmPassword" />
-                    <ErrorMessage name="confirmPassword" component="div" />
+                    <ErrorMessage className='errorMes' name="confirmPassword" component="div" />
                 </div>
-                <button type="submit" disabled={isLoading}>
+                <Button type="submit" disabled={isLoading}>
                     {isLoading ? 'Изменение...' : 'Изменить пароль'}
-                </button>
-                {success && <div>Пароль успешно изменен!</div>}
-                {error && <div>{error.message}</div>}
+                </Button>
+                {success && <div style={{ color: "green" }}>Пароль успешно изменен!</div>}
+                {error && <div style={{ color: "red" }}>{error.message}</div>}
             </Form>
         </Formik>
     );

@@ -4,7 +4,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import Products from '../Products/Products';
 
-
 export default function HomePage() {
 
     return (
@@ -46,8 +45,8 @@ export default function HomePage() {
                     />
                 </SwiperSlide>
             </Swiper>
-
             <Products />
+
         </div>
     );
 };

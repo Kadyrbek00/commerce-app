@@ -1,0 +1,45 @@
+.profile {
+    display: grid;
+    justify-content: center;
+}
+
+.profile .profile-title {
+    font-size: 50px;
+    font-weight: normal;
+}
+
+.profile img {
+    width: 80px;
+    height: 85px;
+    margin-right: 20px;
+}
+
+.profile-content {
+    display: flex;
+}
+
+.content {
+    margin-left: 20px;
+}
+
+.content p {
+    display: grid;
+    background-color: rgba(124, 121, 121, 0.3);
+    padding: 10px 100px 10px 10px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.content button {
+    width: 230px;
+}
+
+.content .changePass {
+    color: rgb(5, 5, 131);
+    text-align: right;
+    margin-top: 10px;
+}
+
+.content .changePass:hover {
+    text-decoration: underline;
+}
